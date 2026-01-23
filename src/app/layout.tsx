@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Casas en venta en Lomas de Angelópolis | Punto Tierra",
     description:
       "Punto Tierra es una inmobiliaria especializada en la venta de casas en Lomas de Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
-    url: "https://puntotierra.com", // Adjust as needed or use metadataBase
+    url: "https://puntotierra.mx", // Adjust as needed or use metadataBase
     siteName: "Punto Tierra",
     locale: "es_MX",
     type: "website",

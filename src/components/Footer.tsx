@@ -36,7 +36,7 @@ export default function Footer() {
                                 <a href="tel:+522221921012" className="hover:text-primary transition">222 192 1012</a>
                             </li>
                             <li>
-                                <a href="mailto:contacto@puntotierra.com" className="hover:text-primary transition">contacto@puntotierra.com</a>
+                                <a href="mailto:contacto@puntotierra.mx" className="hover:text-primary transition">contacto@puntotierra.mx</a>
                             </li>
                             <li>Paseo sinfonía Int D307, Sonata Town Center San Andrés Cholula, Puebla, Mexico</li>
                         </ul>

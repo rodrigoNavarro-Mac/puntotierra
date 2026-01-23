@@ -6,10 +6,10 @@ export default function JsonLd() {
         "@graph": [
             {
                 "@type": "Organization",
-                "@id": "https://puntotierra.com/#organization",
+                "@id": "https://puntotierra.mx/#organization",
                 "name": "Punto Tierra",
-                "url": "https://puntotierra.com",
-                "logo": "https://puntotierra.com/logo.png", // Ensure this exists or update
+                "url": "https://puntotierra.mx",
+                "logo": "https://puntotierra.mx/logo.png", // Ensure this exists or update
                 "contactPoint": {
                     "@type": "ContactPoint",
                     "telephone": "+52-222-192-1012",
@@ -19,11 +19,11 @@ export default function JsonLd() {
             },
             {
                 "@type": "RealEstateAgent",
-                "@id": "https://puntotierra.com/#agent",
+                "@id": "https://puntotierra.mx/#agent",
                 "name": "Punto Tierra",
                 "description": "Punto Tierra es una inmobiliaria especializada en la venta de casas en Lomas de Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
                 "parentOrganization": {
-                    "@id": "https://puntotierra.com/#organization"
+                    "@id": "https://puntotierra.mx/#organization"
                 },
                 "address": {
                     "@type": "PostalAddress",
@@ -35,7 +35,7 @@ export default function JsonLd() {
             },
             {
                 "@type": "OfferCatalog",
-                "@id": "https://puntotierra.com/#catalog",
+                "@id": "https://puntotierra.mx/#catalog",
                 "name": "Catálogo de Casas en Lomas de Angelópolis",
                 "itemListElement": properties.map((prop) => ({
                     "@type": "Offer",
