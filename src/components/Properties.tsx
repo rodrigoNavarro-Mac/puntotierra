@@ -27,7 +27,7 @@ export default function Properties() {
                             <div className="relative h-80 overflow-hidden shrink-0">
                                 <Image
                                     src={prop.image}
-                                    alt={prop.title}
+                                    alt={`Casa en venta en Lomas de Angelópolis, Puebla – ${prop.title}`}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                                 />

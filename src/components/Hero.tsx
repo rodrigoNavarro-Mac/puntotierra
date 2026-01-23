@@ -46,10 +46,10 @@ export default function Hero() {
 
             <div className="relative z-10 container mx-auto px-4 text-center text-white">
                 <h1 className="font-heading text-4xl md:text-6xl font-semibold mb-6 drop-shadow-lg">
-                    Tu punto de partida en bienes raíces
+                    Casas en venta en Lomas de Angelópolis
                 </h1>
-                <p className="font-body text-lg md:text-xl md:max-w-2xl mx-auto mb-10 drop-shadow-md text-gray-100">
-                    Lotes y casas de nivel medio a alto para vivir o invertir, sin complicaciones.
+                <p className="font-body text-lg md:text-xl md:max-w-3xl mx-auto mb-10 drop-shadow-md text-gray-100">
+                    Punto Tierra es una inmobiliaria especializada en la venta de casas en Lomas de Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
