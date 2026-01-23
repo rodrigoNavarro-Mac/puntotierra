@@ -5,10 +5,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const heroImages = [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2070&auto=format&fit=crop"
+    "/img/PC15/PC15_1.jpeg",
+    "/img/PC15/PC15_2.jpeg",
+    "/img/PM11/PM11_1.jpeg",
+    "/img/PM9/PM9_2.jpg",
+    "/img/PM11/PM11_2.jpeg"
 ];
 
 export default function Hero() {
