@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://puntotierra.com/sitemap.xml', // Replace with actual domain if different
+        sitemap: 'https://puntotierra.mx/sitemap.xml', // Replace with actual domain if different
     }
 }
