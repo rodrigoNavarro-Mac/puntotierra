@@ -33,10 +33,10 @@ export default function Footer() {
                         <h3 className="font-semibold text-lg mb-4 text-gray-200">Contacto</h3>
                         <ul className="space-y-3 text-gray-400 text-sm">
                             <li>
-                                <a href="tel:+529991234567" className="hover:text-primary transition">999 123 4567</a>
+                                <a href="tel:+522221921012" className="hover:text-primary transition">222 192 1012</a>
                             </li>
                             <li>
-                                <a href="mailto:hola@puntotierra.com" className="hover:text-primary transition">hola@puntotierra.com</a>
+                                <a href="mailto:contacto@puntotierra.com" className="hover:text-primary transition">contacto@puntotierra.com</a>
                             </li>
                             <li>Paseo sinfonía Int D307, Sonata Town Center San Andrés Cholula, Puebla, Mexico</li>
                         </ul>
