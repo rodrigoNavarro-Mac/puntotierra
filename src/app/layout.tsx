@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
   },
+  icons: {
+    icon: "/logo_corto.png",
+  },
 };
 
 import JsonLd from "@/components/JsonLd";
