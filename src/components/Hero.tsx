@@ -38,6 +38,8 @@ export default function Hero() {
                         fill
                         className="object-cover brightness-[0.7]" // Slightly darker for text contrast
                         priority={index === 0}
+                        quality={60}
+                        sizes="100vw"
                     />
                 </div>
             ))}

@@ -20,10 +20,10 @@ export default function Footer() {
                             Tu punto de partida en bienes raíces. Propiedades seleccionadas para vivir e invertir seguro.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <Link href="#" aria-label="Facebook" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
                                 <Facebook size={20} />
                             </Link>
-                            <Link href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <Link href="#" aria-label="Instagram" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
                                 <Instagram size={20} />
                             </Link>
                         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
                     <div>
                         <h3 className="font-semibold text-lg mb-4 text-gray-200">Legal</h3>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            <li><Link href="#" className="hover:text-primary transition">Aviso de Privacidad</Link></li>
+                            <li><Link href="/aviso-privacidad" className="hover:text-primary transition">Aviso de Privacidad</Link></li>
                         </ul>
                     </div>
                 </div>

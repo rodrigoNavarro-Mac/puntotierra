@@ -54,6 +54,7 @@ export default function Navbar() {
                 <button
                     className="md:hidden z-50 text-primary"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle menu"
                 >
                     {isMobileMenuOpen ? (
                         <X size={28} className={isScrolled ? "text-text-main" : "text-white"} />

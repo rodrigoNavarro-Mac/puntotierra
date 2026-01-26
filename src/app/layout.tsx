@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +33,7 @@ export const metadata: Metadata = {
     title: "Casas en venta en Lomas de Angelópolis | Punto Tierra",
     description:
       "Punto Tierra es una inmobiliaria especializada en la venta de casas en Lomas de Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
-    url: "https://puntotierra.mx", // Adjust as needed or use metadataBase
+    url: "https://puntotierra.mx",
     siteName: "Punto Tierra",
     locale: "es_MX",
     type: "website",
@@ -36,16 +50,14 @@ export const metadata: Metadata = {
   },
 };
 
-import JsonLd from "@/components/JsonLd";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className="antialiased">
+    <html lang="es" className={`${montserrat.variable} ${inter.variable}`}>
+      <body className="antialiased font-body">
         <JsonLd />
         {children}
       </body>

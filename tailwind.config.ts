@@ -16,7 +16,8 @@ const config: Config = {
         "text-main": "#2F2F2F",  // Gris Oscuro
       },
       fontFamily: {
-        body: ["Inter", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+        heading: ["var(--font-heading)", "sans-serif"],
       },
       keyframes: {
         fadeIn: {
