@@ -85,15 +85,22 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
                     <div className="flex flex-col md:flex-row">
                         {/* Image Carousel Section */}
                         <div className="w-full md:w-1/2 relative h-64 md:h-auto min-h-[350px] group bg-gray-100">
-                            {images.length > 0 && (
-                                <Image
-                                    src={images[currentImageIndex]}
-                                    alt={property.title}
-                                    fill
-                                    className="object-cover cursor-zoom-in"
-                                    onClick={openLightbox}
-                                />
-                            )}
+                            {images.map((img, idx) => (
+                                <div
+                                    key={idx}
+                                    className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${idx === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                                        }`}
+                                >
+                                    <Image
+                                        src={img}
+                                        alt={`${property.title} - Imagen ${idx + 1}`}
+                                        fill
+                                        className="object-cover cursor-zoom-in"
+                                        onClick={openLightbox}
+                                        priority={idx === 0}
+                                    />
+                                </div>
+                            ))}
 
                             {/* Type Badge */}
                             <div className="absolute top-4 left-4 bg-primary/90 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide z-10 pointer-events-none">
@@ -105,7 +112,7 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
                                 <>
                                     <button
                                         onClick={prevImage}
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/90 text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/90 text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 z-20"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -113,7 +120,7 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
                                     </button>
                                     <button
                                         onClick={nextImage}
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/90 text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/90 text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 z-20"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -121,7 +128,7 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
                                     </button>
 
                                     {/* Dots */}
-                                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
                                         {images.map((_, idx) => (
                                             <button
                                                 key={idx}
@@ -191,7 +198,7 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
                 <div className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4">
                     <button
                         onClick={closeLightbox}
-                        className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+                        className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors z-50"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

@@ -24,7 +24,10 @@ export default function Properties() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {properties.map((prop) => (
                         <div key={prop.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
-                            <div className="relative h-80 overflow-hidden shrink-0">
+                            <div
+                                className="relative h-80 overflow-hidden shrink-0 cursor-pointer"
+                                onClick={() => setSelectedProperty(prop)}
+                            >
                                 <Image
                                     src={prop.image}
                                     alt={`Casa en venta en Lomas de Angelópolis, Puebla – ${prop.title}`}
@@ -35,6 +38,7 @@ export default function Properties() {
                                     {prop.type}
                                 </div>
                             </div>
+
 
                             <div className="p-6 flex flex-col flex-grow">
                                 <div className="flex justify-between items-start mb-4">
