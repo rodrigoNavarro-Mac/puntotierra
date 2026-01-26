@@ -14,20 +14,20 @@ export default function JsonLd() {
                     "@type": "ContactPoint",
                     "telephone": "+52-222-192-1012",
                     "contactType": "sales",
-                    "areaServed": "Lomas de Angelópolis"
+                    "areaServed": "zona Angelópolis"
                 }
             },
             {
                 "@type": "RealEstateAgent",
                 "@id": "https://puntotierra.mx/#agent",
                 "name": "Punto Tierra",
-                "description": "Punto Tierra es una inmobiliaria especializada en la venta de casas en Lomas de Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
+                "description": "Punto Tierra es una inmobiliaria especializada en la venta de casas en zona Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
                 "parentOrganization": {
                     "@id": "https://puntotierra.mx/#organization"
                 },
                 "address": {
                     "@type": "PostalAddress",
-                    "addressLocality": "Lomas de Angelópolis",
+                    "addressLocality": "zona Angelópolis",
                     "addressRegion": "Puebla",
                     "addressCountry": "MX"
                 },
@@ -36,12 +36,12 @@ export default function JsonLd() {
             {
                 "@type": "OfferCatalog",
                 "@id": "https://puntotierra.mx/#catalog",
-                "name": "Catálogo de Casas en Lomas de Angelópolis",
+                "name": "Catálogo de Casas en zona Angelópolis",
                 "itemListElement": properties.map((prop) => ({
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "SingleFamilyResidence",
-                        "name": `Casa en Lomas de Angelópolis - ${prop.title}`,
+                        "name": `Casa en zona Angelópolis - ${prop.title}`,
                         "description": prop.especificaciones[0] || "Casa residencial de lujo",
                         "numberOfRooms": parseInt(prop.especificaciones.find(e => e.includes("hab")) || "3"), // Rough extraction
                     },

@@ -30,7 +30,7 @@ export default function Properties() {
                             >
                                 <Image
                                     src={prop.image}
-                                    alt={`Casa en venta en Lomas de Angelópolis, Puebla – ${prop.title}`}
+                                    alt={`Casa en venta en zona Angelópolis, Puebla – ${prop.title}`}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                                 />

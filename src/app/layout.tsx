@@ -18,21 +18,21 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: "Punto Tierra | %s",
-    default: "Casas en venta en Lomas de Angelópolis | Punto Tierra",
+    default: "Casas en venta en zona Angelópolis | Punto Tierra",
   },
   description:
-    "Punto Tierra es una inmobiliaria especializada en la venta de casas en Lomas de Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
+    "Punto Tierra es una inmobiliaria especializada en la venta de casas en zona Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
   keywords: [
-    "casas en venta en Lomas de Angelópolis",
+    "casas en venta en zona Angelópolis",
     "casas en Puebla",
-    "comprar casa en Lomas de Angelópolis",
+    "comprar casa en zona Angelópolis",
     "inversión inmobiliaria en Puebla",
     "casas para vivir o invertir",
   ],
   openGraph: {
-    title: "Casas en venta en Lomas de Angelópolis | Punto Tierra",
+    title: "Casas en venta en zona Angelópolis | Punto Tierra",
     description:
-      "Punto Tierra es una inmobiliaria especializada en la venta de casas en Lomas de Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
+      "Punto Tierra es una inmobiliaria especializada en la venta de casas en zona Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
     url: "https://puntotierra.mx",
     siteName: "Punto Tierra",
     locale: "es_MX",

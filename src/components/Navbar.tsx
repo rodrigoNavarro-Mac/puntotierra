@@ -44,8 +44,8 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className={`hidden md:flex gap-8 items-center font-medium ${isScrolled ? "text-text-main" : "text-white drop-shadow-md"}`}>
-                    <Link href="#propiedades" className="hover:text-primary transition-colors">Propiedades</Link>
-                    <Link href="#contacto" className="bg-primary px-5 py-2 rounded-md text-white hover:bg-opacity-90 transition-all">
+                    <Link href="/#propiedades" className="hover:text-primary transition-colors">Propiedades</Link>
+                    <Link href="/#contacto" className="bg-primary px-5 py-2 rounded-md text-white hover:bg-opacity-90 transition-all">
                         Contacto
                     </Link>
                 </div>
@@ -69,14 +69,14 @@ export default function Navbar() {
                         }`}
                 >
                     <Link
-                        href="#propiedades"
+                        href="/#propiedades"
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="text-2xl font-heading font-medium text-text-main"
                     >
                         Propiedades
                     </Link>
                     <Link
-                        href="#contacto"
+                        href="/#contacto"
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="text-2xl font-heading font-medium text-primary"
                     >
