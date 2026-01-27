@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const heroImages = [
     "/img/PC15/PC15_1.jpeg",
     "/img/PC15/PC15_2.jpeg",
-    "/img/PM11/PM11_1.jpeg",
+    "/img/PC17/PC17_1.jpeg",
     "/img/PM9/PM9_2.jpg",
     "/img/PM11/PM11_2.jpeg"
 ];

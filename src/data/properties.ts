@@ -161,5 +161,50 @@ export const properties: Property[] = [
             "/img/PC15/PC15_15.jpeg"
         ],
         type: "Casa Residencial"
+    },
+    {
+        id: 5,
+        title: "Parque Colima 17",
+        price: "$5,154,000.00",
+        currency: "MXN",
+        terreno: "180 m²",
+        construccion: "296 m²",
+        especificaciones: [
+            "Cochera para 2 coches con cuarto de maquinas",
+            "Doble altura en lobby y acceso a cochera",
+            "Cocina integral con alacena y cuarto de servicio/lavado",
+            "Jardín trasero",
+            "1/2 baño",
+            "Cuarto de TV",
+            "Canceles de vidrio templado y aluminio",
+            "3 habitaciones con baño, principal con walk in closet",
+            "Cuarto multiusos con baño completo",
+            "Estudio",
+            "Terraza para roof"
+        ],
+        image: "/img/PC17/PC17_1.jpeg",
+        images: [
+            "/img/PC17/PC17_1.jpeg",
+            "/img/PC17/PC17_2.jpeg",
+            "/img/PC17/PC17_3.jpeg",
+            "/img/PC17/PC17_4.jpeg",
+            "/img/PC17/PC17_5.jpeg",
+            "/img/PC17/PC17_6.jpeg",
+            "/img/PC17/PC17_7.jpeg",
+            "/img/PC17/PC17_8.jpeg",
+            "/img/PC17/PC17_9.jpeg",
+            "/img/PC17/PC17_10.jpeg",
+            "/img/PC17/PC17_11.jpeg",
+            "/img/PC17/PC17_12.jpeg",
+            "/img/PC17/PC17_13.jpeg",
+            "/img/PC17/PC17_14.jpeg",
+            "/img/PC17/PC17_15.jpeg",
+            "/img/PC17/PC17_16.jpeg",
+            "/img/PC17/PC17_17.jpeg",
+            "/img/PC17/PC17_18.jpeg",
+            "/img/PC17/PC17_19.jpeg",
+            "/img/PC17/PC17_20.jpeg"
+        ],
+        type: "Casa Residencial"
     }
 ]
