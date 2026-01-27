@@ -20,10 +20,10 @@ export default function Footer() {
                             Tu punto de partida en bienes raíces. Propiedades seleccionadas para vivir e invertir seguro.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="#" aria-label="Facebook" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <Link href="https://www.facebook.com/profile.php?id=100069903310405" aria-label="Facebook" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
                                 <Facebook size={20} />
                             </Link>
-                            <Link href="#" aria-label="Instagram" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
+                            <Link href="https://www.instagram.com/punto_tierra?igsh=MXZvMGJ6dGN4MXE4NA==" aria-label="Instagram" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition">
                                 <Instagram size={20} />
                             </Link>
                         </div>
