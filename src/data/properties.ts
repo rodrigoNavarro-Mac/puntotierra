@@ -322,20 +322,20 @@ export const properties: Property[] = [
             "Configuraciones flexibles adaptables"
         ],
         description: "Complejo corporativo de oficinas Clase A+ conformado por 4 edificios interconectados, diseñado para albergar empresas líderes con acceso a amenidades exclusivas y espacios flexibles adaptables a distintos tamaños de operación",
-        image: "/img/Fratta/FRATTA-1.jpg",
+        image: "/img/Fratta/Fratta-1.jpg",
         images: [
-            "/img/Fratta/FRATTA-1.jpg",
-            "/img/Fratta/FRATTA-2.jpg",
-            "/img/Fratta/FRATTA-3.jpg",
-            "/img/Fratta/FRATTA-4.jpg",
-            "/img/Fratta/FRATTA-5.jpg",
-            "/img/Fratta/FRATTA-6.jpg",
-            "/img/Fratta/FRATTA-7.jpg",
-            "/img/Fratta/FRATTA-8.jpg",
-            "/img/Fratta/FRATTA-9.jpg",
-            "/img/Fratta/FRATTA-10.jpg",
-            "/img/Fratta/FRATTA-12.jpeg",
-            "/img/Fratta/FRATTA-13.jpg"
+            "/img/Fratta/Fratta-1.jpg",
+            "/img/Fratta/Fratta-2.jpg",
+            "/img/Fratta/Fratta-3.jpg",
+            "/img/Fratta/Fratta-4.jpg",
+            "/img/Fratta/Fratta-5.jpg",
+            "/img/Fratta/Fratta-6.jpg",
+            "/img/Fratta/Fratta-7.jpg",
+            "/img/Fratta/Fratta-8.jpg",
+            "/img/Fratta/Fratta-9.jpg",
+            "/img/Fratta/Fratta-10.jpg",
+            "/img/Fratta/Fratta-12.jpeg",
+            "/img/Fratta/Fratta-13.jpg"
         ]
     },
     {
