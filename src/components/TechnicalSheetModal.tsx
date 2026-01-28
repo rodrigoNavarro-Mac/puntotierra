@@ -131,7 +131,7 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
 
                             {/* Type Badge */}
                             <div className="absolute top-4 left-4 bg-primary/90 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide z-10 pointer-events-none">
-                                {property.type}
+                                {property.propertyType}
                             </div>
 
                             {/* Carousel Controls (only if multiple images) */}
@@ -178,7 +178,10 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
                                         {property.title}
                                     </h2>
                                     <p className="text-2xl font-bold text-primary mb-6">
-                                        {property.price} <span className="text-sm font-normal text-gray-500">{property.currency}</span>
+                                        {property.price != null && property.currency
+                                            ? `${property.price.toLocaleString('es-MX')} ${property.currency}`
+                                            : 'Precio a consultar'
+                                        }
                                     </p>
 
                                     <div className="flex flex-wrap gap-6 mb-6 text-sm text-gray-600 border-b border-gray-100 pb-6">
@@ -274,7 +277,7 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
                                                     style={{ display: "none" }}
                                                     name="LEADCF9"
                                                     readOnly
-                                                    value={`Propiedad: ${property.title}\nPrecio: ${property.price} ${property.currency}\nTerreno: ${property.terreno || "N/A"}\nConstrucción: ${property.construccion || "N/A"}`}
+                                                    value={`Propiedad: ${property.title}\nPrecio: ${property.price != null && property.currency ? `${property.price} ${property.currency}` : 'A consultar'}\nTerreno: ${property.terreno || "N/A"}\nConstrucción: ${property.construccion || "N/A"}`}
                                                 />
 
                                                 {/* Honeypot */}

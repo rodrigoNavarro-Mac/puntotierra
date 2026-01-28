@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const heroImages = [
+    "/img/Fratta/Fratta-1.jpg",
+    "/img/Fratta/Fratta-4.jpg",
+    "/img/Fratta/Fratta-5.jpg",
     "/img/PC15/PC15_1.jpeg",
     "/img/PC15/PC15_2.jpeg",
     "/img/PC17/PC17_1.jpeg",
@@ -44,14 +47,15 @@ export default function Hero() {
                 </div>
             ))}
 
-            <div className="absolute inset-0 bg-black/20 z-0 pointer-events-none" />
+            {/* Green overlay for navbar contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-transparent z-0 pointer-events-none" />
 
             <div className="relative z-10 container mx-auto px-4 text-center text-white">
                 <h1 className="font-heading text-4xl md:text-6xl font-semibold mb-6 drop-shadow-lg">
-                    Casas en venta en zona Angelópolis
+                    Soluciones Inmobiliarias en México
                 </h1>
                 <p className="font-body text-lg md:text-xl md:max-w-3xl mx-auto mb-10 drop-shadow-md text-gray-100">
-                    Punto Tierra es una inmobiliaria especializada en la venta de casas en zona Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.
+                    Punto Tierra ofrece propiedades residenciales y comerciales, desarrollos exclusivos y macrolotes en las mejores ubicaciones de México. Tu aliado para vivir, invertir o hacer crecer tu negocio.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

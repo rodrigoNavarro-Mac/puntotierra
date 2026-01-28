@@ -1,24 +1,38 @@
 export interface Property {
-    id: number;
+    id: string;
     title: string;
-    price: string;
-    currency: string;
+    category: 'Residential' | 'Commercial' | 'Development' | 'Macrolot';
+    listingType: 'Sale' | 'Rent';
+    propertyType: 'House' | 'Apartment' | 'Office' | 'Premise' | 'Land';
+    city: string;
+    ubicacion: string; // Full location for display and SEO
+    developmentName?: string;
+    price?: number | null;
+    currency?: string;
     terreno?: string;
     construccion?: string;
+    area: number;
     especificaciones: string[];
     image: string;
-    images?: string[];
-    type: string;
+    images: string[];
+    description?: string;
 }
 
 export const properties: Property[] = [
+    // Existing Residential Properties - Migrated
     {
-        id: 1,
+        id: "pm11",
         title: "Parque Milan 11",
-        price: "$4,890,000.00",
+        category: "Residential",
+        listingType: "Sale",
+        propertyType: "House",
+        city: "Puebla",
+        ubicacion: "Parque Milan, Lomas de Angelópolis, Puebla",
+        price: 4890000,
         currency: "MXN",
         terreno: "143.615 m²",
         construccion: "238.135 m²",
+        area: 238.135,
         especificaciones: [
             "Cochera para 2 autos con cuarto de maquinaria y bodega",
             "Lobby con doble altura",
@@ -46,16 +60,21 @@ export const properties: Property[] = [
             "/img/PM11/PM11_10.jpeg",
             "/img/PM11/PM11_11.jpeg",
             "/img/PM11/PM11_12.jpeg"
-        ],
-        type: "Casa Residencial"
+        ]
     },
     {
-        id: 2,
+        id: "pm9",
         title: "Parque Milan 9",
-        price: "$4,980,000.00",
+        category: "Residential",
+        listingType: "Sale",
+        propertyType: "House",
+        city: "Puebla",
+        ubicacion: "Parque Milan, Lomas de Angelópolis, Puebla",
+        price: 4980000,
         currency: "MXN",
         terreno: "143.345 m²",
         construccion: "248.97 m²",
+        area: 248.97,
         especificaciones: [
             "Cochera para 2 autos con cuarto de maquinaria y bodega",
             "Cocina integral con isla de granito y alacena",
@@ -83,16 +102,21 @@ export const properties: Property[] = [
             "/img/PM9/PM9_10.jpg",
             "/img/PM9/PM9_11.jpg",
             "/img/PM9/PM9_12.jpg"
-        ],
-        type: "Casa Residencial"
+        ]
     },
     {
-        id: 3,
+        id: "pm7",
         title: "Parque Milan 7",
-        price: "$5,070,000.00",
+        category: "Residential",
+        listingType: "Sale",
+        propertyType: "House",
+        city: "Puebla",
+        ubicacion: "Parque Milan, Lomas de Angelópolis, Puebla",
+        price: 5070000,
         currency: "MXN",
         terreno: "143.323 m²",
         construccion: "270.08 m²",
+        area: 270.08,
         especificaciones: [
             "Cochera para 2 autos con cuarto de maquinaria y bodega",
             "Cocina integral con isla de granito y alacena",
@@ -120,16 +144,21 @@ export const properties: Property[] = [
             "/img/PM7/PM7_11.jpeg",
             "/img/PM7/PM7_12.jpeg",
             "/img/PM7/PM7_13.jpeg"
-        ],
-        type: "Casa Residencial"
+        ]
     },
     {
-        id: 4,
+        id: "pc15",
         title: "Parque Colima 15",
-        price: "$5,300,000.00",
+        category: "Residential",
+        listingType: "Sale",
+        propertyType: "House",
+        city: "Puebla",
+        ubicacion: "Parque Colima, Lomas de Angelópolis, Puebla",
+        price: 5300000,
         currency: "MXN",
         terreno: "184.36 m²",
         construccion: "252.9 m²",
+        area: 252.9,
         especificaciones: [
             "Cocina integral con barra",
             "Cuarto de lavado",
@@ -159,16 +188,21 @@ export const properties: Property[] = [
             "/img/PC15/PC15_13.jpeg",
             "/img/PC15/PC15_14.jpeg",
             "/img/PC15/PC15_15.jpeg"
-        ],
-        type: "Casa Residencial"
+        ]
     },
     {
-        id: 5,
+        id: "pc17",
         title: "Parque Colima 17",
-        price: "$5,154,000.00",
+        category: "Residential",
+        listingType: "Sale",
+        propertyType: "House",
+        city: "Puebla",
+        ubicacion: "Parque Colima, Lomas de Angelópolis, Puebla",
+        price: 5154000,
         currency: "MXN",
         terreno: "180 m²",
         construccion: "296 m²",
+        area: 296,
         especificaciones: [
             "Cochera para 2 coches con cuarto de maquinas",
             "Doble altura en lobby y acceso a cochera",
@@ -204,7 +238,174 @@ export const properties: Property[] = [
             "/img/PC17/PC17_18.jpeg",
             "/img/PC17/PC17_19.jpeg",
             "/img/PC17/PC17_20.jpeg"
+        ]
+    },
+
+    // Developments
+    {
+        id: "fuego-cancun",
+        title: "Fuego",
+        category: "Development",
+        listingType: "Sale",
+        propertyType: "Apartment",
+        city: "Cancún",
+        ubicacion: "Cancún, Quintana Roo",
+        developmentName: "Fuego",
+        price: 3500000,
+        currency: "MXN",
+        area: 85,
+        especificaciones: [
+            "Ubicación privilegiada en Cancún, Quintana Roo",
+            "Desarrollo moderno con amenidades premium",
+            "Cerca de las mejores playas del Caribe",
+            "Seguridad 24/7",
+            "Gimnasio y áreas recreativas",
+            "Alberca infinity"
         ],
-        type: "Casa Residencial"
+        description: "Desarrollo exclusivo en Cancún con vistas al mar Caribe",
+        image: "/img/placeholder-fuego.jpg",
+        images: ["/img/placeholder-fuego.jpg"]
+    },
+    {
+        id: "amura-merida",
+        title: "Amura",
+        category: "Development",
+        listingType: "Sale",
+        propertyType: "Apartment",
+        city: "Mérida",
+        ubicacion: "Temozon Norte, Mérida, Yucatán",
+        developmentName: "Amura",
+        price: 2800000,
+        currency: "MXN",
+        area: 75,
+        especificaciones: [
+            "Ubicación estratégica en Mérida, Yucatán",
+            "Arquitectura contemporánea",
+            "Acabados de lujo",
+            "Amenidades completas",
+            "Roof garden",
+            "Estacionamiento techado"
+        ],
+        description: "Desarrollo contemporáneo en el corazón de Mérida",
+        image: "/img/placeholder-amura.jpg",
+        images: ["/img/placeholder-amura.jpg"]
+    },
+
+    // Commercial
+    {
+        id: "fratta-office-1",
+        title: "Fratta Oficinas",
+        category: "Commercial",
+        listingType: "Rent",
+        propertyType: "Office",
+        city: "Puebla",
+        ubicacion: "zona Angelópolis, Puebla",
+        developmentName: "Fratta",
+        area: 18000,
+        especificaciones: [
+            "Complejo corporativo de 18,000 m² Clase A+",
+            "Torre B: Oficinas en renta desde 350 m²",
+            "Torre C: Plantas desde 720 m²",
+            "Torre D: Oficinas en venta desde 96 m²",
+            "Torre A: Locales comerciales",
+            "3 sótanos de estacionamiento",
+            "Más de 600 cajones de estacionamiento",
+            "1 cajón por cada 30 m²",
+            "100 estaciones para bicicletas",
+            "Cajones con carga eléctrica",
+            "Regaderas",
+            "Auditorio capacidad 100 personas",
+            "Salas de juntas",
+            "Sala de consejo",
+            "Servicio de cafetería",
+            "Gimnasio totalmente equipado",
+            "Configuraciones flexibles adaptables"
+        ],
+        description: "Complejo corporativo de oficinas Clase A+ conformado por 4 edificios interconectados, diseñado para albergar empresas líderes con acceso a amenidades exclusivas y espacios flexibles adaptables a distintos tamaños de operación",
+        image: "/img/Fratta/FRATTA-1.jpg",
+        images: [
+            "/img/Fratta/FRATTA-1.jpg",
+            "/img/Fratta/FRATTA-2.jpg",
+            "/img/Fratta/FRATTA-3.jpg",
+            "/img/Fratta/FRATTA-4.jpg",
+            "/img/Fratta/FRATTA-5.jpg",
+            "/img/Fratta/FRATTA-6.jpg",
+            "/img/Fratta/FRATTA-7.jpg",
+            "/img/Fratta/FRATTA-8.jpg",
+            "/img/Fratta/FRATTA-9.jpg",
+            "/img/Fratta/FRATTA-10.jpg",
+            "/img/Fratta/FRATTA-12.jpeg",
+            "/img/Fratta/FRATTA-13.jpg"
+        ]
+    },
+    {
+        id: "local-angelopolis-1",
+        title: "Local Comercial",
+        category: "Commercial",
+        listingType: "Sale",
+        propertyType: "Premise",
+        city: "Puebla",
+        ubicacion: "Zona Angelópolis, Puebla",
+        price: 4500000,
+        currency: "MXN",
+        area: 180,
+        especificaciones: [
+            "Excelente ubicación comercial",
+            "Alto flujo peatonal",
+            "Estacionamiento amplio",
+            "Instalaciones listas para operar",
+            "Acceso a vías principales"
+        ],
+        description: "Local comercial en zona de alto crecimiento",
+        image: "/img/placeholder-local.jpg",
+        images: ["/img/placeholder-local.jpg"]
+    },
+
+    // Macrolots
+    {
+        id: "macrolote-atlixco",
+        title: "Macrolote Atlixco",
+        category: "Macrolot",
+        listingType: "Sale",
+        propertyType: "Land",
+        city: "Atlixco",
+        ubicacion: "Atlixco, Puebla",
+        price: 15000000,
+        currency: "MXN",
+        area: 5000,
+        terreno: "5,000 m²",
+        especificaciones: [
+            "Terreno ideal para desarrollo inmobiliario",
+            "Ubicación estratégica",
+            "Todos los servicios disponibles",
+            "Documentación en regla",
+            "Gran potencial de plusvalía"
+        ],
+        description: "Excelente oportunidad de inversión en Atlixco",
+        image: "/img/placeholder-macrolote.jpg",
+        images: ["/img/placeholder-macrolote.jpg"]
+    },
+    {
+        id: "macrolote-cholula",
+        title: "Macrolote Cholula",
+        category: "Macrolot",
+        listingType: "Sale",
+        propertyType: "Land",
+        city: "Cholula",
+        ubicacion: "San Andrés Cholula, Puebla",
+        price: 12000000,
+        currency: "MXN",
+        area: 4000,
+        terreno: "4,000 m²",
+        especificaciones: [
+            "Terreno en zona de alto crecimiento",
+            "Acceso a servicios",
+            "Ideal para proyectos residenciales o comerciales",
+            "Escrituras al día",
+            "Zona con alta demanda"
+        ],
+        description: "Inversión estratégica en Cholula",
+        image: "/img/placeholder-macrolote.jpg",
+        images: ["/img/placeholder-macrolote.jpg"]
     }
 ]

@@ -21,13 +21,13 @@ export default function JsonLd() {
                 "@type": "RealEstateAgent",
                 "@id": "https://puntotierra.mx/#agent",
                 "name": "Punto Tierra",
-                "description": "Punto Tierra es una inmobiliaria especializada en la venta de casas en zona Angelópolis, Puebla, ofreciendo opciones accesibles para vivir o invertir en una de las zonas con mayor plusvalía del estado.",
+                "description": "Punto Tierra ofrece propiedades residenciales y comerciales, desarrollos exclusivos y macrolotes en las mejores ubicaciones de México.",
                 "parentOrganization": {
                     "@id": "https://puntotierra.mx/#organization"
                 },
                 "address": {
                     "@type": "PostalAddress",
-                    "addressLocality": "zona Angelópolis",
+                    "addressLocality": "Puebla",
                     "addressRegion": "Puebla",
                     "addressCountry": "MX"
                 },
@@ -36,17 +36,36 @@ export default function JsonLd() {
             {
                 "@type": "OfferCatalog",
                 "@id": "https://puntotierra.mx/#catalog",
-                "name": "Catálogo de Casas en zona Angelópolis",
+                "name": "Catálogo de Propiedades Inmobiliarias en México",
                 "itemListElement": properties.map((prop) => ({
                     "@type": "Offer",
                     "itemOffered": {
-                        "@type": "SingleFamilyResidence",
-                        "name": `Casa en zona Angelópolis - ${prop.title}`,
-                        "description": prop.especificaciones[0] || "Casa residencial de lujo",
-                        "numberOfRooms": parseInt(prop.especificaciones.find(e => e.includes("hab")) || "3"), // Rough extraction
+                        "@type": prop.category === 'Residential' ? "SingleFamilyResidence" :
+                            prop.category === 'Commercial' ? "CommercialRealEstate" :
+                                prop.category === 'Development' ? "Apartment" : "RealEstateListing",
+                        "name": `${prop.title} - ${prop.ubicacion}`,
+                        "description": prop.description || prop.especificaciones[0] || `Propiedad en ${prop.ubicacion}`,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": prop.city,
+                            "addressRegion": prop.ubicacion,
+                            "addressCountry": "MX"
+                        },
+                        "numberOfRooms": parseInt(prop.especificaciones.find(e => e.includes("hab")) || "0"),
+                        "floorSize": {
+                            "@type": "QuantitativeValue",
+                            "value": prop.area,
+                            "unitCode": "MTK"
+                        }
                     },
-                    "price": prop.price.replace(/[^0-9.]/g, ""),
-                    "priceCurrency": prop.currency
+                    ...(prop.price != null && prop.currency ? {
+                        "price": prop.price.toString(),
+                        "priceCurrency": prop.currency
+                    } : {}),
+                    "availability": "https://schema.org/InStock",
+                    "seller": {
+                        "@id": "https://puntotierra.mx/#organization"
+                    }
                 }))
             }
         ]
