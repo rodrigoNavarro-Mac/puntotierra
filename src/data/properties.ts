@@ -299,8 +299,8 @@ export const properties: Property[] = [
         listingType: "Rent",
         propertyType: "Office",
         city: "Puebla",
-        ubicacion: "zona Angelópolis, Puebla",
-        developmentName: "Fratta",
+        ubicacion: "Fratta Center Sonata, Sonata – Lomas de Angelópolis, San Andrés Cholula, Puebla",
+        developmentName: "Fratta Center Sonata",
         area: 18000,
         especificaciones: [
             "Complejo corporativo de 18,000 m² Clase A+",
@@ -339,26 +339,32 @@ export const properties: Property[] = [
         ]
     },
     {
-        id: "local-angelopolis-1",
-        title: "Local Comercial",
+        id: "lc-01-fratta-sonata",
+        title: "Local Comercial LC-01",
         category: "Commercial",
-        listingType: "Sale",
+        listingType: "Rent",
         propertyType: "Premise",
         city: "Puebla",
-        ubicacion: "Zona Angelópolis, Puebla",
-        price: 4500000,
+        ubicacion: "Fratta Center Sonata, Torre D, Sonata – Lomas de Angelópolis, San Andrés Cholula, Puebla",
+        developmentName: "Fratta Center Sonata",
+        price: 38820,
         currency: "MXN",
-        area: 180,
+        area: 77.64,
         especificaciones: [
-            "Excelente ubicación comercial",
-            "Alto flujo peatonal",
-            "Estacionamiento amplio",
-            "Instalaciones listas para operar",
-            "Acceso a vías principales"
+            "Torre: D",
+            "Local: LC-01",
+            "Nivel: Planta baja",
+            "Área interior rentable: 77.64 m²",
+            "Área exterior rentable: 0.00 m²",
+            "Superficie total rentable: 77.64 m²",
+            "Renta por m²: $500.00 MXN + IVA (sin adecuación)",
+            "Renta mensual: $38,820.00 MXN + IVA",
+            "Ubicación privilegiada en Sonata – Lomas de Angelópolis",
+            "Excelente visibilidad y flujo peatonal"
         ],
-        description: "Local comercial en zona de alto crecimiento",
-        image: "/img/placeholder-local.jpg",
-        images: ["/img/placeholder-local.jpg"]
+        description: "Local comercial en renta ubicado en la planta baja de Torre D del exclusivo desarrollo Fratta Center Sonata. Ideal para comercio al menudeo, oficinas o servicios. Precio de renta sin incluir adecuaciones.",
+        image: "/img/Fratta/LC1-1.jpg",
+        images: ["/img/Fratta/LC1-1.jpg", "/img/Fratta/LC1-2.jpeg", "/img/Fratta/LC1-3.jpeg", "/img/Fratta/LC1-4.jpeg"]
     },
 
     // Macrolots
