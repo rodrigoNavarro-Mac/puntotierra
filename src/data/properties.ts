@@ -3,7 +3,7 @@ export interface Property {
     title: string;
     category: 'Residential' | 'Commercial' | 'Development' | 'Macrolot' | 'Plurifamiliar';
     listingType: 'Sale' | 'Rent';
-    propertyType: 'House' | 'Apartment' | 'Office' | 'Premise' | 'Macrolote' | 'Plurifamiliar';
+    propertyType: 'House' | 'Apartment' | 'Office' | 'Premise' | 'Macrolote' | 'Plurifamiliar' | 'Desarollo';
     city: string;
     ubicacion: string; // Full location for display and SEO
     developmentName?: string;
@@ -268,27 +268,38 @@ export const properties: Property[] = [
     },
     {
         id: "amura-merida",
-        title: "Amura",
+        title: "Residencial Amura · Soluna Residencial",
         category: "Development",
         listingType: "Sale",
-        propertyType: "Apartment",
+        propertyType: "Desarollo",
         city: "Mérida",
-        ubicacion: "Temozon Norte, Mérida, Yucatán",
-        developmentName: "Amura",
-        price: 2800000,
+        ubicacion: "Soluna Residencial, Mérida, Yucatán",
+        developmentName: "Residencial Amura",
+        price: null,
         currency: "MXN",
-        area: 75,
+        terreno: "Desde 300 m² hasta 401 m²",
+        area: 300,
         especificaciones: [
-            "Ubicación estratégica en Mérida, Yucatán",
-            "Arquitectura contemporánea",
-            "Acabados de lujo",
-            "Amenidades completas",
-            "Roof garden",
-            "Estacionamiento techado"
+            "Uso de suelo habitacional",
+            "Acceso privado y controlado",
+            "Privada rodeada de áreas verdes",
+            "Zona de alta plusvalía",
+            "Casa club de primer nivel",
+            "Piscina y asoleaderos",
+            "Gimnasio",
+            "Salón de yoga",
+            "Sauna",
+            "Canchas de pádel",
+            "Lounge bar",
+            "Salón de eventos",
+            "Ludoteca",
+            "Área de juegos infantiles",
+            "Ciclopista",
+            "Parques temáticos y amplias áreas verdes"
         ],
-        description: "Desarrollo contemporáneo en el corazón de Mérida",
-        image: "/img/placeholder-amura.jpg",
-        images: ["/img/placeholder-amura.jpg"]
+        description: "Desarrollo residencial de alto nivel ubicado dentro de Soluna Residencial en Mérida, Yucatán. Privada exclusiva con terrenos unifamiliares desde 300 m² hasta 401 m², rodeada de áreas verdes con diseño urbano de vanguardia. Las amenidades incluyen casa club de primer nivel con piscina, gimnasio, salón de yoga, sauna, canchas de pádel, lounge bar, salón de eventos, ludoteca, área de juegos infantiles, ciclopista y parques temáticos.",
+        image: "/img/Amura/Amura_1.png",
+        images: ["/img/Amura/Amura_1.png", "/img/Amura/Amura_2.png", "/img/Amura/Amura_3.png", "/img/Amura/Amura_4.jpeg"]
     },
 
     // Commercial
