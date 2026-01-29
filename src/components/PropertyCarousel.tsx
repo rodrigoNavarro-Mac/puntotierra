@@ -45,7 +45,13 @@ export default function PropertyCarousel({ properties, onPropertyClick }: Proper
     };
 
     const handleNext = () => {
-        setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+        setCurrentIndex((prev) => {
+            // Si está en el último slide, vuelve al inicio
+            if (prev >= maxIndex) {
+                return 0;
+            }
+            return prev + 1;
+        });
     };
 
     useEffect(() => {
@@ -57,6 +63,17 @@ export default function PropertyCarousel({ properties, onPropertyClick }: Proper
             });
         }
     }, [currentIndex, properties.length]);
+
+    // Auto-rotate carousel every 5 seconds
+    useEffect(() => {
+        if (properties.length <= itemsPerView) return; // No auto-rotate if all items are visible
+
+        const intervalId = setInterval(() => {
+            handleNext();
+        }, 5000); // Avanza cada 5 segundos
+
+        return () => clearInterval(intervalId);
+    }, [currentIndex, maxIndex, itemsPerView, properties.length]);
 
     if (properties.length === 0) {
         return (
@@ -120,8 +137,8 @@ export default function PropertyCarousel({ properties, onPropertyClick }: Proper
                             key={idx}
                             onClick={() => setCurrentIndex(idx)}
                             className={`h-2 rounded-full transition-all ${idx === currentIndex
-                                    ? 'bg-primary w-8'
-                                    : 'bg-gray-300 w-2'
+                                ? 'bg-primary w-8'
+                                : 'bg-gray-300 w-2'
                                 }`}
                             aria-label={`Ir a posición ${idx + 1}`}
                         />
