@@ -1,9 +1,9 @@
 export interface Property {
     id: string;
     title: string;
-    category: 'Residential' | 'Commercial' | 'Development' | 'Macrolot';
+    category: 'Residential' | 'Commercial' | 'Development' | 'Macrolot' | 'Plurifamiliar';
     listingType: 'Sale' | 'Rent';
-    propertyType: 'House' | 'Apartment' | 'Office' | 'Premise' | 'Land';
+    propertyType: 'House' | 'Apartment' | 'Office' | 'Premise' | 'Macrolote' | 'Plurifamiliar';
     city: string;
     ubicacion: string; // Full location for display and SEO
     developmentName?: string;
@@ -369,49 +369,127 @@ export const properties: Property[] = [
 
     // Macrolots
     {
-        id: "macrolote-atlixco",
-        title: "Macrolote Atlixco",
-        category: "Macrolot",
+        id: "plurifamiliar-isla-blanca-02",
+        title: "Plurifamiliar Isla Blanca · Lote 02",
+        category: "Plurifamiliar",
         listingType: "Sale",
-        propertyType: "Land",
-        city: "Atlixco",
-        ubicacion: "Atlixco, Puebla",
-        price: 15000000,
+        propertyType: "Plurifamiliar",
+        city: "Puebla",
+        ubicacion: "Lomas de Angelópolis, Isla Blanca, Puebla",
+        price: null,
         currency: "MXN",
-        area: 5000,
-        terreno: "5,000 m²",
+        area: 1254.183,
+        terreno: "1,254.183 m²",
         especificaciones: [
-            "Terreno ideal para desarrollo inmobiliario",
-            "Ubicación estratégica",
-            "Todos los servicios disponibles",
-            "Documentación en regla",
-            "Gran potencial de plusvalía"
+            "Macrolote habitacional",
+            "Uso de suelo habitacional",
+            "PB + 4 niveles permitidos",
+            "COS: 50%",
+            "Densidad: 19 viv",
+            "Proyecto residencial de alto nivel",
+            "Desarrollo vertical (sujeto a reglamento)",
+            "Ubicado dentro del cluster Isla Blanca",
+            "Frente a vialidad Isla Blanca",
+            "Zona de alta plusvalía y entorno planificado",
+            "Norte: 9.553 m, 13.141 m y 14.524 m (límite de clúster)",
+            "Sur: 30.000 m (con vialidad Isla Blanca)",
+            "Este: 41.472 m (con Lote 04)",
+            "Oeste: 20.436 m (límite de clúster)",
+            "Desarrollo plurifamiliar",
+            "Inversión patrimonial",
+            "Proyecto residencial a mediano y largo plazo"
         ],
-        description: "Excelente oportunidad de inversión en Atlixco",
-        image: "/img/placeholder-macrolote.jpg",
-        images: ["/img/placeholder-macrolote.jpg"]
+        description: "Macrolote habitacional con frente a vialidad Isla Blanca, ideal para desarrollo plurifamiliar, inversión patrimonial y proyecto residencial a mediano y largo plazo",
+        image: "/img/IB2/IB2_1.png",
+        images: ["/img/IB2/IB2_1.png"]
     },
     {
-        id: "macrolote-cholula",
-        title: "Macrolote Cholula",
-        category: "Macrolot",
+        id: "plurifamiliar-isla-blanca-04",
+        title: "Plurifamiliar Isla Blanca · Lote 04",
+        category: "Plurifamiliar",
         listingType: "Sale",
-        propertyType: "Land",
-        city: "Cholula",
-        ubicacion: "San Andrés Cholula, Puebla",
-        price: 12000000,
+        propertyType: "Plurifamiliar",
+        city: "Puebla",
+        ubicacion: "Lomas de Angelópolis, Isla Blanca, Puebla",
+        price: null,
         currency: "MXN",
-        area: 4000,
-        terreno: "4,000 m²",
+        area: 1680.322,
+        terreno: "1,680.322 m²",
         especificaciones: [
-            "Terreno en zona de alto crecimiento",
-            "Acceso a servicios",
-            "Ideal para proyectos residenciales o comerciales",
-            "Escrituras al día",
-            "Zona con alta demanda"
+            "Macrolote habitacional",
+            "Uso de suelo habitacional",
+            "PB + 4 niveles permitidos",
+            "COS: 50%",
+            "Densidad: 24 viv",
+            "Proyecto residencial de alto nivel",
+            "Desarrollo vertical (sujeto a reglamento)",
+            "Ubicado dentro del cluster Isla Blanca",
+            "Zona de alta plusvalía y entorno planificado",
+            "Norte: 20.197 m, 17.979 m y 13.281 m (límite de clúster)",
+            "Sur: 30.000 m (con vialidad Isla Blanca)",
+            "Este: 44.902 m (con Lote 05)",
+            "Oeste: 44.712 m (con Lote 02)"
         ],
-        description: "Inversión estratégica en Cholula",
-        image: "/img/placeholder-macrolote.jpg",
-        images: ["/img/placeholder-macrolote.jpg"]
+        description: "Macrolote habitacional ideal para desarrollo plurifamiliar de alto nivel con capacidad para 24 viviendas en Lomas de Angelópolis",
+        image: "/img/IB4/IB4_1.png",
+        images: ["/img/IB4/IB4_1.png"]
+    },
+    {
+        id: "plurifamiliar-isla-blanca-06",
+        title: "Plurifamiliar Isla Blanca · Lote 06",
+        category: "Plurifamiliar",
+        listingType: "Sale",
+        propertyType: "Plurifamiliar",
+        city: "Puebla",
+        ubicacion: "Lomas de Angelópolis, Isla Blanca, Puebla",
+        price: null,
+        currency: "MXN",
+        area: 1050.668,
+        terreno: "1,050.668 m²",
+        especificaciones: [
+            "Macrolote habitacional",
+            "Uso de suelo habitacional",
+            "PB + 4 niveles permitidos",
+            "COS: 50%",
+            "Densidad: 16 viv",
+            "Proyecto residencial de alto nivel",
+            "Desarrollo vertical (sujeto a reglamento)",
+            "Ubicado dentro del cluster Isla Blanca",
+            "Cul-de-sac (mayor privacidad)",
+            "Zona de alta plusvalía y entorno planificado",
+            "Desarrollo plurifamiliar",
+            "Inversión patrimonial",
+            "Proyecto residencial a mediano y largo plazo"
+        ],
+        description: "Macrolote habitacional ideal para desarrollo plurifamiliar, inversión patrimonial y proyecto residencial a mediano y largo plazo en Lomas de Angelópolis",
+        image: "/img/IB6/IB6_1.png",
+        images: ["/img/IB6/IB6_1.png"]
+    },
+    {
+        id: "plurifamiliar-isla-blanca-10",
+        title: "Plurifamiliar Isla Blanca · Lote 10",
+        category: "Plurifamiliar",
+        listingType: "Sale",
+        propertyType: "Plurifamiliar",
+        city: "Puebla",
+        ubicacion: "Lomas de Angelópolis, Isla Blanca, Puebla",
+        price: null,
+        currency: "MXN",
+        area: 1060,
+        terreno: "1,050.609 m²",
+        especificaciones: [
+            "Macrolote habitacional",
+            "Uso de suelo habitacional",
+            "PB + 4 niveles permitidos",
+            "COS: 50%",
+            "CUS: 16 viv",
+            "Proyecto residencial de alto nivel",
+            "Desarrollo vertical (sujeto a reglamento)",
+            "Ubicado dentro del cluster Isla Blanca",
+            "Zona de alta plusvalía y entorno consolidado"
+        ],
+        description: "Macrolote habitacional en Lomas de Angelópolis, ideal para proyecto residencial de alto nivel con desarrollo vertical",
+        image: "/img/IB10/IB10_1.png",
+        images: ["/img/IB10/IB10_1.png"]
     }
 ]

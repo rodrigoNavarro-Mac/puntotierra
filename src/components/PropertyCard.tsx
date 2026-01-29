@@ -30,6 +30,9 @@ export default function PropertyCard({ property, onMoreInfo }: PropertyCardProps
         if (category === 'Development') {
             return 'Desarrollo';
         }
+        if (category === 'Plurifamiliar') {
+            return 'Plurifamiliar';
+        }
         return 'Macrolote';
     };
 

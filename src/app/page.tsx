@@ -19,7 +19,7 @@ export default function Home() {
   const residentialProperties = properties.filter(p => p.category === "Residential");
   const commercialProperties = properties.filter(p => p.category === "Commercial");
   const developmentProperties = properties.filter(p => p.category === "Development");
-  const macrolotProperties = properties.filter(p => p.category === "Macrolot");
+  const macrolotProperties = properties.filter(p => p.category === "Macrolot" || p.category === "Plurifamiliar");
 
   return (
     <main className="min-h-screen bg-white">

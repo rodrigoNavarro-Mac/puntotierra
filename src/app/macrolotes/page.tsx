@@ -1,10 +1,22 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
-import Properties from "@/components/Properties";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHeader from "@/components/PageHeader";
+import PropertyCard from "@/components/PropertyCard";
+import TechnicalSheetModal from "@/components/TechnicalSheetModal";
+import { properties, Property } from "@/data/properties";
+import { useState } from "react";
 
 export default function MacrolotesPage() {
+    const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+
+    // Filter to show both Macrolot and Plurifamiliar categories
+    const macrolotProperties = properties.filter(p =>
+        p.category === "Macrolot" || p.category === "Plurifamiliar"
+    );
+
     return (
         <main className="min-h-screen bg-white">
             <Navbar />
@@ -12,11 +24,32 @@ export default function MacrolotesPage() {
                 title="Macrolotes Disponibles"
                 subtitle="Terrenos de gran extensión para desarrollo inmobiliario en ubicaciones estratégicas."
             />
-            <Properties
-                category="Macrolot"
-            />
+            <section id="propiedades" className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    {macrolotProperties.length === 0 ? (
+                        <div className="text-center py-20">
+                            <p className="text-gray-500 text-lg">No hay propiedades disponibles en esta categoría.</p>
+                        </div>
+                    ) : (
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {macrolotProperties.map((prop) => (
+                                <PropertyCard
+                                    key={prop.id}
+                                    property={prop}
+                                    onMoreInfo={setSelectedProperty}
+                                />
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </section>
             <Footer />
             <WhatsAppButton />
+
+            <TechnicalSheetModal
+                property={selectedProperty}
+                onClose={() => setSelectedProperty(null)}
+            />
         </main>
     );
 }
