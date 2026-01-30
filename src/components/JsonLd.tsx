@@ -9,7 +9,7 @@ export default function JsonLd() {
                 "@id": "https://puntotierra.mx/#organization",
                 "name": "Punto Tierra",
                 "url": "https://puntotierra.mx",
-                "logo": "https://puntotierra.mx/logo.png", // Ensure this exists or update
+                "logo": "https://puntotierra.mx/logo.png",
                 "contactPoint": {
                     "@type": "ContactPoint",
                     "telephone": "+52-222-192-1012",

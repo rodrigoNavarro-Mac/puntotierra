@@ -40,10 +40,10 @@ export const properties: Property[] = [
             "Principal con vestidor",
             "Terraza con pergolado, asador ",
             "Hab. de servicio con baño",
-            "Jardin interior",
-            "Jardin trasero",
+            "Jardín interior",
+            "Jardín trasero",
             "Alacena de cocina",
-            "Cancelleria de vidrio templado y aluminio premium matte"
+            "Cancelería de vidrio templado y aluminio premium matte"
         ],
         image: "/img/PC15/PC15_1.jpeg",
         images: [
@@ -86,7 +86,7 @@ export const properties: Property[] = [
             "Cuarto de usos múltiples con 1/2 baño",
             "Terraza para roofgarden",
             "Area de lavado techado",
-            "Cancellería de vidrio templado y aluminio premium matte",
+            "Cancelería de vidrio templado y aluminio premium matte",
             "Piso de formato grande matte",
             "Baños con cubiertas de marmol"
         ],
@@ -220,7 +220,7 @@ export const properties: Property[] = [
             "Cuarto de usos múltiples con 1/2 baño",
             "Terraza para roofgarden",
             "Cuarto de servicio con baño completo y area de lavado techado",
-            "Cancellería de vidrio templado y aluminio premium matte",
+            "Cancelería de vidrio templado y aluminio premium matte",
             "Piso de formato grande matte",
             "Baños con cubiertas de marmol"
         ],
@@ -244,31 +244,47 @@ export const properties: Property[] = [
     // Developments
     {
         id: "fuego-cancun",
-        title: "Fuego",
+        title: "FUEGO – Terraquia",
         category: "Development",
         listingType: "Sale",
-        propertyType: "Apartment",
+        propertyType: "Desarollo",
         city: "Cancún",
-        ubicacion: "Cancún, Quintana Roo",
+        ubicacion: "Km 6.5 de Av. Huayacán, Cancún, Quintana Roo",
         developmentName: "Fuego",
-        price: 3500000,
+        price: null,
         currency: "MXN",
-        area: 85,
+        area: 159,
+        terreno: "Desde ~159 m² hasta 249 m²",
         especificaciones: [
-            "Ubicación privilegiada en Cancún, Quintana Roo",
-            "Desarrollo moderno con amenidades premium",
-            "Cerca de las mejores playas del Caribe",
-            "Seguridad 24/7",
-            "Gimnasio y áreas recreativas",
-            "Alberca infinity"
+            "Superficies desde ~159 m² hasta 249 m²",
+            "Lotes interiores y en esquina",
+            "Uso habitacional",
+            "Comunidad residencial consciente y sustentable",
+            "Integración total con la naturaleza",
+            "Desarrollo planeado dentro de Terraquia",
+            "Parque central y áreas verdes",
+            "Vialidades de concreto hidráulico",
+            "Servicios subterráneos",
+            "Iluminación ecológica",
+            "Seguridad 24/7 y barda perimetral",
+            "A 7 km del Aeropuerto Internacional de Cancún",
+            "A 15 min de playas",
+            "Ideal para vivienda residencial o inversión patrimonial",
+            "Plusvalía a corto y mediano plazo"
         ],
-        description: "Desarrollo exclusivo en Cancún con vistas al mar Caribe",
-        image: "/img/placeholder-fuego.jpg",
-        images: ["/img/placeholder-fuego.jpg"]
+        description: "FUEGO es un desarrollo residencial ubicado en el Km 6.5 de Av. Huayacán, dentro de Terraquia. Ofrece terrenos residenciales desde ~159 m² hasta 249 m² en una comunidad consciente y sustentable, con integración total a la naturaleza y amenidades de primer nivel.",
+        image: "/img/Fuego/Fuego_1.jpeg",
+        images: [
+            "/img/Fuego/Fuego_1.jpeg",
+            "/img/Fuego/Fuego_2.jpeg",
+            "/img/Fuego/Fuego_3.jpeg",
+            "/img/Fuego/Fuego_4.jpeg",
+            "/img/Fuego/Fuego_5.jpeg"
+        ]
     },
     {
         id: "amura-merida",
-        title: "Residencial Amura · Soluna Residencial",
+        title: "Amura · Soluna Residencial",
         category: "Development",
         listingType: "Sale",
         propertyType: "Desarollo",
@@ -299,7 +315,7 @@ export const properties: Property[] = [
         ],
         description: "Desarrollo residencial de alto nivel ubicado dentro de Soluna Residencial en Mérida, Yucatán. Privada exclusiva con terrenos unifamiliares desde 300 m² hasta 401 m², rodeada de áreas verdes con diseño urbano de vanguardia. Las amenidades incluyen casa club de primer nivel con piscina, gimnasio, salón de yoga, sauna, canchas de pádel, lounge bar, salón de eventos, ludoteca, área de juegos infantiles, ciclopista y parques temáticos.",
         image: "/img/Amura/Amura_1.png",
-        images: ["/img/Amura/Amura_1.png", "/img/Amura/Amura_2.png", "/img/Amura/Amura_3.png", "/img/Amura/Amura_4.jpeg"]
+        images: ["/img/Amura/Amura_1.png", "/img/Amura/Amura_2.jpg", "/img/Amura/Amura_3.png", "/img/Amura/Amura_4.jpeg", "/img/Amura/Amura_5.jpg", "/img/Amura/Amura_6.jpg", "/img/Amura/Amura_7.jpg", "/img/Amura/Amura_8.jpg", "/img/Amura/Amura_9.jpg", "/img/Amura/Amura_10.jpg", "/img/Amura/Amura_11.jpg", "/img/Amura/Amura_12.jpg"]
     },
 
     // Commercial
@@ -399,13 +415,9 @@ export const properties: Property[] = [
             "Densidad: 19 viv",
             "Proyecto residencial de alto nivel",
             "Desarrollo vertical (sujeto a reglamento)",
-            "Ubicado dentro del cluster Isla Blanca",
+            "Ubicado dentro del clúster Isla Blanca",
             "Frente a vialidad Isla Blanca",
             "Zona de alta plusvalía y entorno planificado",
-            "Norte: 9.553 m, 13.141 m y 14.524 m (límite de clúster)",
-            "Sur: 30.000 m (con vialidad Isla Blanca)",
-            "Este: 41.472 m (con Lote 04)",
-            "Oeste: 20.436 m (límite de clúster)",
             "Desarrollo plurifamiliar",
             "Inversión patrimonial",
             "Proyecto residencial a mediano y largo plazo"
@@ -434,12 +446,8 @@ export const properties: Property[] = [
             "Densidad: 24 viv",
             "Proyecto residencial de alto nivel",
             "Desarrollo vertical (sujeto a reglamento)",
-            "Ubicado dentro del cluster Isla Blanca",
+            "Ubicado dentro del clúster Isla Blanca",
             "Zona de alta plusvalía y entorno planificado",
-            "Norte: 20.197 m, 17.979 m y 13.281 m (límite de clúster)",
-            "Sur: 30.000 m (con vialidad Isla Blanca)",
-            "Este: 44.902 m (con Lote 05)",
-            "Oeste: 44.712 m (con Lote 02)"
         ],
         description: "Macrolote habitacional ideal para desarrollo plurifamiliar de alto nivel con capacidad para 24 viviendas en Lomas de Angelópolis",
         image: "/img/IB4/IB4_1.png",
@@ -465,7 +473,7 @@ export const properties: Property[] = [
             "Densidad: 16 viv",
             "Proyecto residencial de alto nivel",
             "Desarrollo vertical (sujeto a reglamento)",
-            "Ubicado dentro del cluster Isla Blanca",
+            "Ubicado dentro del clúster Isla Blanca",
             "Cul-de-sac (mayor privacidad)",
             "Zona de alta plusvalía y entorno planificado",
             "Desarrollo plurifamiliar",

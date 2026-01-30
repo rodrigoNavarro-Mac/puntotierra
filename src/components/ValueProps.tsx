@@ -3,8 +3,8 @@ import { CheckCircle, MapPin, FileText } from "lucide-react";
 const benefits = [
     {
         icon: MapPin,
-        title: "Propiedades claras y accesibles",
-        description: "Ubicaciones estratégicas con plusvalía real, sin sorpresas."
+        title: "Propiedades estratégicas",
+        description: "Ubicaciones con plusvalía real, sin sorpresas."
     },
     {
         icon: CheckCircle,

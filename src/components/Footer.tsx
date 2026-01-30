@@ -38,7 +38,7 @@ export default function Footer() {
                             <li>
                                 <a href="mailto:contacto@puntotierra.mx" className="hover:text-primary transition">contacto@puntotierra.mx</a>
                             </li>
-                            <li>Paseo sinfonía Int D307, Sonata Town Center San Andrés Cholula, Puebla, Mexico</li>
+                            <li>Paseo Sinfonía Int D307, Sonata Town Center San Andrés Cholula, Puebla, Mexico</li>
                         </ul>
                     </div>
 
@@ -52,7 +52,6 @@ export default function Footer() {
 
                 <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p>&copy; {new Date().getFullYear()} Punto Tierra. Todos los derechos reservados.</p>
-                    <p className="mt-2 md:mt-0">Diseñado para conversiones.</p>
                 </div>
             </div>
         </footer>
