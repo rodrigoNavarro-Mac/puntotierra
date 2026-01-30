@@ -240,6 +240,64 @@ export const properties: Property[] = [
             "/img/PM7/PM7_13.jpeg"
         ]
     },
+    {
+        id: "ps-b28",
+        title: "Residencia Bulgaria 28, Parque Sofia",
+        category: "Residential",
+        listingType: "Sale",
+        propertyType: "House",
+        city: "Puebla",
+        ubicacion: "Bulgaria 28, Parque Sofia, Lomas de Angelópolis, Puebla",
+        price: 7280000,
+        currency: "MXN",
+        terreno: "204 m²",
+        construccion: "361 m²",
+        area: 361,
+        especificaciones: [
+            "Vestíbulo doble altura",
+            "Sala doble altura",
+            "Comedor",
+            "Cocina integral con isla y barra de cuarzo",
+            "Alacena",
+            "Estudio",
+            "Medio baño en planta baja",
+            "Jardín",
+            "Pasillo de servicio",
+            "Cuarto de máquinas",
+            "Estacionamiento semi-techado para 2 autos",
+            "Recámara principal amplia con gran vestidor y baño",
+            "2 recámaras secundarias con closet y baño c/u",
+            "Salón de juegos",
+            "Medio baño en tercer nivel",
+            "Roofgarden",
+            "Cuarto de lavado",
+            "Terraza de servicio",
+            "Cuarto de servicio con baño"
+        ],
+        description: "Residencia en venta en Parque Sofia. Planta Baja: Vestíbulo doble altura, sala doble altura, comedor, cocina integral con isla y barra de cuarzo, alacena, estudio, medio baño, jardín, pasillo de servicio, cuarto de máquinas y estacionamiento semi-techado para 2 autos. Planta Alta: Recámara principal amplia con gran vestidor y baño, 2 recámaras secundarias con closet y baño cada una. Tercer Nivel: Salón de juegos, medio baño, roofgarden, cuarto de lavado, terraza de servicio y cuarto de servicio con baño.",
+        image: "/img/PS_B28/PS_B28_1.jpeg",
+        images: [
+            "/img/PS_B28/PS_B28_1.jpeg",
+            "/img/PS_B28/PS_B28_2.jpeg",
+            "/img/PS_B28/PS_B28_3.jpeg",
+            "/img/PS_B28/PS_B28_4.jpeg",
+            "/img/PS_B28/PS_B28_5.jpeg",
+            "/img/PS_B28/PS_B28_6.jpeg",
+            "/img/PS_B28/PS_B28_7.jpeg",
+            "/img/PS_B28/PS_B28_8.jpeg",
+            "/img/PS_B28/PS_B28_9.jpeg",
+            "/img/PS_B28/PS_B28_10.jpeg",
+            "/img/PS_B28/PS_B28_11.jpeg",
+            "/img/PS_B28/PS_B28_12.jpeg",
+            "/img/PS_B28/PS_B28_13.jpeg",
+            "/img/PS_B28/PS_B28_14.jpeg",
+            "/img/PS_B28/PS_B28_15.jpeg",
+            "/img/PS_B28/PS_B28_16.jpeg",
+            "/img/PS_B28/PS_B28_17.jpeg",
+            "/img/PS_B28/PS_B28_18.jpeg",
+            "/img/PS_B28/PS_B28_19.jpeg"
+        ]
+    },
 
     // Developments
     {
@@ -284,7 +342,7 @@ export const properties: Property[] = [
     },
     {
         id: "amura-merida",
-        title: "Amura · Soluna Residencial",
+        title: "Amura - Soluna Residencial",
         category: "Development",
         listingType: "Sale",
         propertyType: "Desarollo",
