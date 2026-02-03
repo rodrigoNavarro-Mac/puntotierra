@@ -7,10 +7,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface PropertyCarouselProps {
     properties: Property[];
-    onPropertyClick: (property: Property) => void;
 }
 
-export default function PropertyCarousel({ properties, onPropertyClick }: PropertyCarouselProps) {
+export default function PropertyCarousel({ properties }: PropertyCarouselProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -124,7 +123,7 @@ export default function PropertyCarousel({ properties, onPropertyClick }: Proper
                             scrollSnapAlign: 'start'
                         }}
                     >
-                        <PropertyCard property={property} onMoreInfo={onPropertyClick} />
+                        <PropertyCard property={property} />
                     </div>
                 ))}
             </div>

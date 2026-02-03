@@ -52,8 +52,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="es" className={`${montserrat.variable} ${inter.variable}`}>
@@ -83,6 +85,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
         <JsonLd />
         {children}
+        {modal}
       </body>
     </html>
   );

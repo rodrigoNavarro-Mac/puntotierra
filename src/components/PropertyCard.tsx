@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Property } from "@/data/properties";
 
 interface PropertyCardProps {
     property: Property;
-    onMoreInfo: (property: Property) => void;
+    onMoreInfo?: (property: Property) => void;
 }
 
-export default function PropertyCard({ property, onMoreInfo }: PropertyCardProps) {
+export default function PropertyCard({ property }: PropertyCardProps) {
     const formatPrice = (price?: number | null, currency?: string) => {
         if (price == null || !currency) {
             return 'Precio a consultar';
@@ -16,7 +17,7 @@ export default function PropertyCard({ property, onMoreInfo }: PropertyCardProps
         return new Intl.NumberFormat('es-MX', {
             style: 'currency',
             currency: currency,
-            minimumFractionDigits: 2
+            minimumFractionDigits: 0
         }).format(price);
     };
 
@@ -37,11 +38,8 @@ export default function PropertyCard({ property, onMoreInfo }: PropertyCardProps
     };
 
     return (
-        <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
-            <div
-                className="relative h-80 overflow-hidden shrink-0 cursor-pointer"
-                onClick={() => onMoreInfo(property)}
-            >
+        <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
+            <Link href={`/propiedades/${property.id}`} className="relative h-80 overflow-hidden shrink-0 cursor-pointer block">
                 <Image
                     src={property.image}
                     alt={`${property.title} - ${property.city}`}
@@ -63,20 +61,22 @@ export default function PropertyCard({ property, onMoreInfo }: PropertyCardProps
                         </div>
                     )}
                 </div>
-            </div>
+            </Link>
 
             <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-4">
                     <div>
-                        <h3 className="font-heading text-xl font-semibold text-text-main">
-                            {property.title}
-                        </h3>
+                        <Link href={`/propiedades/${property.id}`}>
+                            <h3 className="font-heading text-xl font-semibold text-text-main hover:text-primary transition-colors">
+                                {property.title}
+                            </h3>
+                        </Link>
                         <p className="text-sm text-gray-500 mt-1">{property.ubicacion}</p>
                     </div>
-                    <p className="text-primary font-bold text-lg whitespace-nowrap ml-2">
-                        {formatPrice(property.price, property.currency)}
-                    </p>
                 </div>
+                <p className="text-primary font-bold text-lg whitespace-nowrap mb-4">
+                    {formatPrice(property.price, property.currency)}
+                </p>
 
                 <div className="space-y-3 mb-6 flex-grow">
                     {/* Dimensions */}
@@ -100,8 +100,8 @@ export default function PropertyCard({ property, onMoreInfo }: PropertyCardProps
                         <ul className="text-sm text-gray-600 space-y-1">
                             {property.especificaciones.slice(0, 5).map((spec, index) => (
                                 <li key={index} className="flex items-start gap-2">
-                                    <span className="text-secondary mt-1">•</span>
-                                    <span>{spec}</span>
+                                    <span className="text-secondary mt-1 min-w-[5px]">•</span>
+                                    <span className="line-clamp-1">{spec}</span>
                                 </li>
                             ))}
                             {property.especificaciones.length > 5 && (
@@ -113,12 +113,12 @@ export default function PropertyCard({ property, onMoreInfo }: PropertyCardProps
                     )}
                 </div>
 
-                <button
-                    onClick={() => onMoreInfo(property)}
+                <Link
+                    href={`/propiedades/${property.id}`}
                     className="block w-full text-center border border-secondary text-secondary hover:bg-secondary hover:text-white font-medium py-3 rounded-md transition-colors duration-300 mt-auto"
                 >
                     Más información
-                </button>
+                </Link>
             </div>
         </div >
     );

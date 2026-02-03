@@ -8,15 +8,13 @@ interface CategorySectionProps {
     description: string;
     properties: Property[];
     viewMoreLink: string;
-    onPropertyClick: (property: Property) => void;
 }
 
 export default function CategorySection({
     title,
     description,
     properties,
-    viewMoreLink,
-    onPropertyClick
+    viewMoreLink
 }: CategorySectionProps) {
     if (properties.length === 0) {
         return null; // Don't show section if no properties
@@ -38,7 +36,6 @@ export default function CategorySection({
                 {/* Carousel */}
                 <PropertyCarousel
                     properties={properties}
-                    onPropertyClick={onPropertyClick}
                 />
 
                 {/* Ver más button at bottom */}

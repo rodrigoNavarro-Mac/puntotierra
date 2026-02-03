@@ -5,13 +5,9 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHeader from "@/components/PageHeader";
 import PropertyCard from "@/components/PropertyCard";
-import TechnicalSheetModal from "@/components/TechnicalSheetModal";
-import { properties, Property } from "@/data/properties";
-import { useState } from "react";
+import { properties } from "@/data/properties";
 
 export default function MacrolotesPage() {
-    const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
-
     // Filter to show both Macrolot and Plurifamiliar categories
     const macrolotProperties = properties.filter(p =>
         p.category === "Macrolot" || p.category === "Plurifamiliar"
@@ -36,7 +32,6 @@ export default function MacrolotesPage() {
                                 <PropertyCard
                                     key={prop.id}
                                     property={prop}
-                                    onMoreInfo={setSelectedProperty}
                                 />
                             ))}
                         </div>
@@ -46,10 +41,6 @@ export default function MacrolotesPage() {
             <Footer />
             <WhatsAppButton />
 
-            <TechnicalSheetModal
-                property={selectedProperty}
-                onClose={() => setSelectedProperty(null)}
-            />
         </main>
     );
 }

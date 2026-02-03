@@ -9,11 +9,9 @@ import LeadForm from "@/components/LeadForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CategorySection from "@/components/CategorySection";
-import TechnicalSheetModal from "@/components/TechnicalSheetModal";
 import { properties, Property } from "@/data/properties";
 
 export default function Home() {
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
 
   // Filter properties by category
   const residentialProperties = properties.filter(p => p.category === "Residential");
@@ -34,7 +32,6 @@ export default function Home() {
           description="Casas y departamentos en venta y renta en las mejores ubicaciones."
           properties={residentialProperties}
           viewMoreLink="/residencial?type=sale"
-          onPropertyClick={setSelectedProperty}
         />
 
         <div className="border-t border-gray-200" />
@@ -44,7 +41,6 @@ export default function Home() {
           description="Locales comerciales y oficinas para impulsar tu negocio."
           properties={commercialProperties}
           viewMoreLink="/comercial?type=premise"
-          onPropertyClick={setSelectedProperty}
         />
 
         <div className="border-t border-gray-200" />
@@ -54,7 +50,6 @@ export default function Home() {
           description="Proyectos inmobiliarios en las mejores ciudades de México."
           properties={developmentProperties}
           viewMoreLink="/desarrollos"
-          onPropertyClick={setSelectedProperty}
         />
 
         <div className="border-t border-gray-200" />
@@ -64,7 +59,6 @@ export default function Home() {
           description="Terrenos de gran extensión para desarrollo inmobiliario."
           properties={macrolotProperties}
           viewMoreLink="/macrolotes"
-          onPropertyClick={setSelectedProperty}
         />
       </div>
 
@@ -74,10 +68,6 @@ export default function Home() {
       <WhatsAppButton />
 
       {/* Property Details Modal */}
-      <TechnicalSheetModal
-        property={selectedProperty}
-        onClose={() => setSelectedProperty(null)}
-      />
     </main>
   );
 }
