@@ -242,7 +242,7 @@ export const properties: Property[] = [
     },
     {
         id: "ps-b28",
-        title: "Residencia Bulgaria 28, Parque Sofia",
+        title: "Parque Sofia 28",
         category: "Residential",
         listingType: "Sale",
         propertyType: "House",
