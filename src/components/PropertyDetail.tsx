@@ -156,10 +156,24 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
                                     </h2>
                                 )}
                                 <button
-                                    onClick={() => {
+                                    onClick={async () => {
                                         const url = `${window.location.origin}/propiedades/${property.id}`;
+
+                                        if (navigator.share) {
+                                            try {
+                                                await navigator.share({
+                                                    title: property.title,
+                                                    text: `Mira esta propiedad en Punto Tierra: ${property.title}`,
+                                                    url: url
+                                                });
+                                                return;
+                                            } catch (err) {
+                                                console.log('Error sharing:', err);
+                                            }
+                                        }
+
+                                        // Fallback: Copy to clipboard
                                         navigator.clipboard.writeText(url);
-                                        // Optional: Show a toast notification here
                                         const btn = document.getElementById(`share-btn-${property.id}`);
                                         if (btn) {
                                             const originalContent = btn.innerHTML;
