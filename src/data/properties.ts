@@ -328,7 +328,7 @@ export const properties: Property[] = [
             "Roof garden techado"
         ],
         description: "Planta baja: cochera 2 autos, vestíbulo a doble altura, sala-comedor, cocina abierta con cuarto de despensa, recámara amplia con baño. Planta alta: Sala de tv, dos recámaras secundarias con baño, recámara principal con vestidor y baño. Primer Nivel: Área de usos múltiples, medio baño, cuarto de servicio con baño, cuarto de lavado, patio de tendido y Roof garden techado.",
-        image: "/img/PG10/PG10_1.jpg",
+        image: "/img/PG10/PG10_1.jpeg",
         images: ["/img/PG10/PG10_1.jpeg", "/img/PG10/PG10_2.jpeg","/img/PG10/PG10_3.jpeg","/img/PG10/PG10_4.jpeg","/img/PG10/PG10_5.jpeg","/img/PG10/PG10_6.jpeg","/img/PG10/PG10_7.jpeg","/img/PG10/PG10_8.jpeg","/img/PG10/PG10_9.jpeg","/img/PG10/PG10_10.jpeg","/img/PG10/PG10_11.jpeg","/img/PG10/PG10_12.jpeg","/img/PG10/PG10_13.jpeg"]
     },
 
