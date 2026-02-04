@@ -85,9 +85,9 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
                 </button>
             )}
 
-            <div className={`flex flex-col ${isModal ? 'md:flex-row' : 'lg:grid lg:grid-cols-2 lg:gap-12'}`}>
+            <div className={`flex flex-col ${isModal ? '' : 'lg:grid lg:grid-cols-2 lg:gap-12'}`}>
                 {/* Image Carousel Section */}
-                <div className={`w-full relative group bg-gray-100 ${isModal ? 'md:w-1/2 min-h-[350px] h-64 md:h-auto' : 'h-[500px] lg:h-[650px] rounded-2xl overflow-hidden'}`}>
+                <div className={`w-full relative group bg-gray-100 ${isModal ? 'h-[300px] sm:h-[400px] md:h-[500px]' : 'h-[500px] lg:h-[650px] rounded-2xl overflow-hidden'}`}>
                     {images.map((img, idx) => (
                         <div
                             key={idx}
@@ -146,7 +146,7 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
                 </div>
 
                 {/* Content Section */}
-                <div className={`w-full flex flex-col ${isModal ? 'md:w-1/2 p-6 md:p-8 md:pt-16' : 'py-6 lg:py-8'}`}>
+                <div className={`w-full flex flex-col ${isModal ? 'p-6 md:p-8' : 'py-6 lg:py-8'}`}>
                     {!showContactForm ? (
                         <>
                             <div className="flex justify-between items-start mb-2">
@@ -233,7 +233,7 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
                                 <h3 className="font-heading text-xl font-semibold text-text-main mb-4">
                                     Características
                                 </h3>
-                                <ul className="grid grid-cols-1 gap-y-3 text-gray-600 mb-8">
+                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-gray-600 mb-8">
                                     {property.especificaciones.map((spec, index) => (
                                         <li key={index} className="flex items-start gap-3">
                                             <span className="text-secondary mt-1.5 min-w-[6px]">
