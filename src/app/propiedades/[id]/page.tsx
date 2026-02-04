@@ -1,5 +1,6 @@
 import { properties } from "@/data/properties";
 import PropertyDetail from "@/components/PropertyDetail";
+import CategorySection from "@/components/CategorySection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -24,11 +25,11 @@ export async function generateMetadata(
     }
 
     return {
-        title: `${property.title} | Punto Tierra`,
+        title: property.title,
         description: property.description || `Propiedad en ${property.city} - ${property.title}`,
         openGraph: {
             title: `${property.title} | Punto Tierra`,
-            description: property.description || `Propiedad en ${property.city}`,
+            description: property.description || `Propiedad en ${property.city} - ${property.title}`,
             images: [property.image],
         },
     }
@@ -48,6 +49,26 @@ export default async function PropertyPage({ params }: Props) {
         notFound();
     }
 
+    const relatedProperties = properties
+        .filter(p => p.category === property.category && p.id !== property.id)
+        .slice(0, 3);
+
+    const categoryLinks: Record<string, string> = {
+        'Residential': '/residencial',
+        'Commercial': '/comercial',
+        'Development': '/desarrollos',
+        'Macrolot': '/macrolotes',
+        'Plurifamiliar': '/macrolotes' // Assuming Plurifamiliar goes to Macrolotes based on page.tsx logic
+    };
+
+    const categoryNames: Record<string, string> = {
+        'Residential': 'Residencial',
+        'Commercial': 'Comercial',
+        'Development': 'Desarrollos',
+        'Macrolot': 'Macrolotes',
+        'Plurifamiliar': 'Plurifamiliar'
+    };
+
     return (
         <main className="min-h-screen bg-gray-50 flex flex-col">
             <Navbar />
@@ -57,7 +78,7 @@ export default async function PropertyPage({ params }: Props) {
                 <div className="absolute inset-0">
                     <Image
                         src={property.image}
-                        alt="Background"
+                        alt={`Portada de ${property.title} - ${property.propertyType} en ${property.city}`}
                         fill
                         className="object-cover opacity-20"
                         priority
@@ -66,14 +87,19 @@ export default async function PropertyPage({ params }: Props) {
                 </div>
 
                 <div className="relative container mx-auto z-10 text-center text-white">
-                    <div className="flex justify-start mb-4">
-                        <a href="/" className="text-white/90 hover:text-white transition-colors flex items-center gap-2 w-fit font-medium text-sm md:text-base backdrop-blur-sm bg-black/10 px-3 py-1.5 rounded-full hover:bg-black/20">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            Volver al inicio
-                        </a>
+                    {/* Breadcrumbs */}
+                    <div className="flex justify-start mb-6 text-sm md:text-base backdrop-blur-sm bg-black/10 px-4 py-2 rounded-full w-fit">
+                        <nav className="flex items-center gap-2 text-white/80">
+                            <a href="/" className="hover:text-white transition-colors">Inicio</a>
+                            <span>/</span>
+                            <a href={categoryLinks[property.category] || '/'} className="hover:text-white transition-colors">
+                                {categoryNames[property.category] || property.category}
+                            </a>
+                            <span>/</span>
+                            <span className="text-white font-medium truncate max-w-[150px] md:max-w-xs">{property.title}</span>
+                        </nav>
                     </div>
+
                     <h1 className="font-heading text-3xl md:text-5xl font-bold drop-shadow-lg mb-2">
                         {property.title}
                     </h1>
@@ -94,6 +120,18 @@ export default async function PropertyPage({ params }: Props) {
                     </div>
                 </div>
             </div>
+
+            {/* Related Properties */}
+            {relatedProperties.length > 0 && (
+                <div className="bg-white border-t border-gray-100">
+                    <CategorySection
+                        title="Propiedades Similares"
+                        description="Otras opciones que te podrían interesar."
+                        properties={relatedProperties}
+                        viewMoreLink={categoryLinks[property.category] || '/'}
+                    />
+                </div>
+            )}
 
             <Footer />
             <WhatsAppButton />

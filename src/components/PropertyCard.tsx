@@ -42,7 +42,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
             <Link href={`/propiedades/${property.id}`} className="relative h-80 overflow-hidden shrink-0 cursor-pointer block">
                 <Image
                     src={property.image}
-                    alt={`${property.title} - ${property.city}`}
+                    alt={`${property.propertyType} en ${property.listingType === 'Sale' ? 'venta' : 'renta'} en ${property.city} - ${property.title}`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />

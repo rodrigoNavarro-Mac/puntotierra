@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#607443",      // Verde Tierra
-        secondary: "#5E6F64",    // Verde Oliva
-        accent: "#E8E3D8",       // Arena Clara
-        "text-main": "#2F2F2F",  // Gris Oscuro
+        primary: "#53564b",
+        secondary: "#53564b",
+        accent: "#E8E3D8",
+        "text-main": "#2F2F2F",
       },
       fontFamily: {
         body: ["var(--font-body)", "sans-serif"],

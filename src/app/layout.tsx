@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "./",
+    canonical: "https://puntotierra.mx",
   },
   icons: {
     icon: "/logo_corto.png",

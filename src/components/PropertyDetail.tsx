@@ -96,7 +96,7 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
                         >
                             <Image
                                 src={img}
-                                alt={`${property.title} - Imagen ${idx + 1}`}
+                                alt={`${property.propertyType} en ${property.listingType === 'Sale' ? 'venta' : 'renta'} en ${property.city} - ${property.title} - Imagen ${idx + 1}`}
                                 fill
                                 className="object-cover cursor-zoom-in"
                                 onClick={openLightbox}

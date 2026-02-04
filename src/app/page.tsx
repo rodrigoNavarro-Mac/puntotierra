@@ -26,7 +26,7 @@ export default function Home() {
       <ValueProps />
 
       {/* Property Sections with Carousels */}
-      <div className="bg-gray-50">
+      <div id="propiedades" className="bg-gray-50 scroll-mt-24">
         <CategorySection
           title="Propiedades Residenciales"
           description="Casas y departamentos en venta y renta en las mejores ubicaciones."
