@@ -45,6 +45,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
                     alt={`${property.propertyType} en ${property.listingType === 'Sale' ? 'venta' : 'renta'} en ${property.city} - ${property.title}`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4 bg-primary/90 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">

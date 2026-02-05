@@ -101,6 +101,7 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
                                 className="object-cover cursor-zoom-in"
                                 onClick={openLightbox}
                                 priority={idx === 0}
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
                     ))}
