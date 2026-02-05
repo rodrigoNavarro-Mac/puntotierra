@@ -115,6 +115,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
 
                 <Link
                     href={`/propiedades/${property.id}`}
+                    aria-label={`Ver más información sobre ${property.title}`}
                     className="block w-full text-center border border-secondary text-secondary hover:bg-secondary hover:text-white font-medium py-3 rounded-md transition-colors duration-300 mt-auto"
                 >
                     Más información
