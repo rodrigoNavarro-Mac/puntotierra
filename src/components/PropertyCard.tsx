@@ -119,7 +119,8 @@ export default function PropertyCard({ property }: PropertyCardProps) {
                     aria-label={`Ver más información sobre ${property.title}`}
                     className="block w-full text-center border border-secondary text-secondary hover:bg-secondary hover:text-white font-medium py-3 rounded-md transition-colors duration-300 mt-auto"
                 >
-                    Más información
+                    <span className="sr-only">Ver más sobre {property.title}</span>
+                    <span aria-hidden="true">Ver detalles</span>
                 </Link>
             </div>
         </div >
