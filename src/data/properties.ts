@@ -567,7 +567,7 @@ export const properties: Property[] = [
             "Parques temáticos y amplias áreas verdes"
         ],
         description: "Desarrollo residencial de alto nivel ubicado dentro de Soluna Residencial en Mérida, Yucatán. Privada exclusiva con terrenos unifamiliares desde 300 m² hasta 401 m², rodeada de áreas verdes con diseño urbano de vanguardia. Las amenidades incluyen casa club de primer nivel con piscina, gimnasio, salón de yoga, sauna, canchas de pádel, lounge bar, salón de eventos, ludoteca, área de juegos infantiles, ciclopista y parques temáticos.",
-        image: "/img/Amura/Amura_2.png",
+        image: "/img/Amura/Amura_2.jpg",
         images: ["/img/Amura/Amura_1.png", "/img/Amura/Amura_2.jpg", "/img/Amura/Amura_3.png", "/img/Amura/Amura_4.jpg", "/img/Amura/Amura_5.jpg", "/img/Amura/Amura_6.jpg", "/img/Amura/Amura_7.jpg", "/img/Amura/Amura_8.jpg", "/img/Amura/Amura_9.jpg", "/img/Amura/Amura_10.jpg", "/img/Amura/Amura_11.jpg", "/img/Amura/Amura_12.jpg"]
     },
 

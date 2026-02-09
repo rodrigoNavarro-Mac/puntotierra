@@ -4,6 +4,7 @@ import { Property } from "@/data/properties";
 import { submitZohoLead } from "@/app/actions";
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
+import * as fbq from '@/lib/fpixel';
 
 interface PropertyDetailProps {
     property: Property;
@@ -26,6 +27,16 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
         setCurrentImageIndex(0);
         setShowContactForm(false);
         setFormStatus("idle");
+
+        // Fire ViewContent event
+        fbq.event('ViewContent', {
+            content_ids: [property.id],
+            content_name: property.title,
+            content_type: 'product',
+            content_category: 'real_estate',
+            value: property.price || 0,
+            currency: 'MXN'
+        });
     }, [property]);
 
     const handleContactClick = () => {
@@ -43,7 +54,23 @@ export default function PropertyDetail({ property, onClose, isModal = false }: P
 
         const formData = new FormData(e.currentTarget);
 
+        // Generate Event ID for deduplication
+        // Use crypto.randomUUID() if available, otherwise a simple fallback (timestamp + random)
+        const eventId = typeof crypto !== 'undefined' && crypto.randomUUID
+            ? crypto.randomUUID()
+            : `lead-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+
+        formData.append('event_id', eventId);
+
+        // 1. Fire Pixel Event (Client Side) - Immediate signal
+        fbq.event('Lead', {
+            content_name: property.title,
+            currency: 'MXN',
+            value: property.price || 0
+        }, eventId); // Deduplication eventID
+
         try {
+            // 2. Submit to Server Action (CAPI + Zoho)
             const result = await submitZohoLead(formData);
 
             if (result.success) {
