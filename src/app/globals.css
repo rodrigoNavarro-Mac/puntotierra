@@ -4,8 +4,13 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent horizontal pan / drift when pinch-zooming on mobile */
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 body {
   @apply bg-white text-text-main font-body;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }

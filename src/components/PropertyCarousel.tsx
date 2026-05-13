@@ -90,7 +90,7 @@ export default function PropertyCarousel({ properties }: PropertyCarouselProps) 
                     <button
                         onClick={handlePrevious}
                         disabled={currentIndex === 0}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                        className="absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                         aria-label="Anterior"
                     >
                         <ChevronLeft size={24} className="text-primary" />
@@ -98,7 +98,7 @@ export default function PropertyCarousel({ properties }: PropertyCarouselProps) 
                     <button
                         onClick={handleNext}
                         disabled={currentIndex >= maxIndex}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                        className="absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                         aria-label="Siguiente"
                     >
                         <ChevronRight size={24} className="text-primary" />
