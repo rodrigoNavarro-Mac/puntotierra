@@ -4,13 +4,19 @@
 
 html {
   scroll-behavior: smooth;
-  /* Prevent horizontal pan / drift when pinch-zooming on mobile */
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   overscroll-behavior-x: none;
+  /* Block horizontal page pan at the gesture level; children keep default (e.g. carousels). */
+  touch-action: pan-y pinch-zoom;
 }
 
 body {
   @apply bg-white text-text-main font-body;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   overscroll-behavior-x: none;
+  touch-action: pan-y pinch-zoom;
 }

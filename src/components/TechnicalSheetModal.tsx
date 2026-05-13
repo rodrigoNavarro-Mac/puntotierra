@@ -18,10 +18,10 @@ export default function TechnicalSheetModal({ property, onClose }: TechnicalShee
             document.body.style.overflow = "hidden";
         } else {
             setIsVisible(false);
-            document.body.style.overflow = "unset";
+            document.body.style.overflow = "";
         }
         return () => {
-            document.body.style.overflow = "unset";
+            document.body.style.overflow = "";
         };
     }, [property]);
 

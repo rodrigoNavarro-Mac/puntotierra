@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
+import PreventHorizontalPan from "@/components/PreventHorizontalPan";
 import Script from "next/script";
 
 const montserrat = Montserrat({
@@ -64,6 +65,7 @@ export default function RootLayout({
       <head>
       </head>
       <body className="antialiased font-body">
+        <PreventHorizontalPan />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -75,8 +77,10 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <JsonLd />
-        {children}
-        {modal}
+        <div className="relative min-w-0 w-full max-w-full overflow-x-clip">
+          {children}
+          {modal}
+        </div>
       </body>
       <Script
         id="gtm"

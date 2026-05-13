@@ -26,14 +26,14 @@ export default function Navbar() {
     // Bloquear scroll del body cuando el menú móvil está abierto
     useEffect(() => {
         if (isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = "hidden";
         } else {
-            document.body.style.overflow = 'unset';
+            // Empty string removes inline overflow so globals.css overflow-x applies again
+            document.body.style.overflow = "";
         }
 
-        // Cleanup
         return () => {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow = "";
         };
     }, [isMobileMenuOpen]);
 
@@ -144,7 +144,7 @@ export default function Navbar() {
 
             {/* Mobile Sidebar - FUERA del nav */}
             <div
-                className={`fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white z-[71] flex flex-col pt-6 px-6 pb-6 transition-transform duration-300 md:hidden overflow-y-auto shadow-2xl ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white z-[71] flex flex-col pt-6 px-6 pb-6 transition-transform duration-300 md:hidden overflow-y-auto shadow-2xl ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
                     }`}
             >
                 {/* Header del menú con logo y botón cerrar */}
